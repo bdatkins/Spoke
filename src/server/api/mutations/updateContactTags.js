@@ -11,6 +11,8 @@ export const updateContactTags = async (
 ) => {
   let contact;
   try {
+    console.debug("updateContactTags tags:", JSON.stringify(tags));
+
     contact = await cacheableData.campaignContact.load(campaignContactId);
     const campaign = await loaders.campaign.load(contact.campaign_id);
     await assignmentRequiredOrAdminRole(

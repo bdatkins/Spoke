@@ -75,6 +75,7 @@ const tagUpdateActionHandler = async ({
   texter
 }) => {
   const handler = await ActionHandlers.rawActionHandler(name);
+  console.log("tagUpdateActionHandler tags ", JSON.stringify(tags));
   await handler.onTagUpdate(tags, contact, campaign, organization, texter);
 };
 

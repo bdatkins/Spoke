@@ -34,6 +34,8 @@ export async function onTagUpdate(
   organization,
   texter
 ) {
+  console.info(`Zapier onTagUpdate tags:` + JSON.stringify(tags));
+
   const baseUrl = getConfig("BASE_URL", organization);
   const conversationLink = `${baseUrl}/app/${organization.id}/todos/review/${contact.id}`;
 
