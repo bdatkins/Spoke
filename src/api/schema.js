@@ -163,6 +163,7 @@ const rootSchema = gql`
 
   input ContactTagInput {
     id: String
+    name: String
     value: String
   }
 
